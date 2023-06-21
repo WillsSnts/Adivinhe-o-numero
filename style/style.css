@@ -1,0 +1,137 @@
+*, *:after, *:before
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'VT323', monospace;
+    font-size: 1em;
+    background-color: #000;
+    color: #00FF00;
+    text-align: center;
+}
+.cabecalho
+{
+    padding: 5%;
+    font-size: 3em;
+    text-transform: uppercase;
+}
+.cabecalho h1
+{
+    border-right: 15px solid #00FF00;
+    padding-right: 5px;
+}
+.corpo
+{
+    padding: 5%;
+    font-size: 1.5em;
+    text-transform: uppercase;
+}
+.corpo p
+{
+    padding: 10px;
+}
+.divisoria
+{
+    position: relative;
+    padding: 100px;
+}
+#resposta
+{
+    position: absolute;
+    border: 1px solid #00FF00;
+    border-radius: 2px;
+    left: 50%;
+    bottom: 40%;
+    width: 50%;
+    transform: translate(-50%, 0%);
+}
+.botão
+{
+    position: absolute;
+    border-color: #00FF00;
+    font-size: .8em;
+}
+#confirma
+{
+    left: 30%;
+    bottom: 5%;
+    transform: translate(-50%, 0%);
+}
+#reinicia
+{
+    left: 70%;
+    bottom: 5%;
+    transform: translate(-50%, 0%);
+}
+
+#textcab, #tentativas, #text
+{
+    border-right: 15px solid #00FF00;
+    padding-right: 5px;
+    display:inline-block;
+    max-width: 0px;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: pisca normal infinite 0.8s, escrever normal 5s steps(55)  both;
+}
+
+@keyframes pisca
+{
+    0%
+    {
+        border-right-color: #00FF00;
+    }
+    10%
+    {
+        border-right-color: transparent;
+    }
+    20%
+    {
+        border-right-color: #00FF00;
+    }
+    30%
+    {
+        border-right-color: transparent;
+    }
+    40%
+    {
+        border-right-color: #00FF00;
+    }
+    50%
+    {
+        border-right-color: transparent;
+    }
+    60%
+    {
+        border-right-color: #00FF00;
+    }
+    70%
+    {
+        border-right-color: transparent;
+    }
+    80%
+    {
+        border-right-color: #00FF00;
+    }
+    90%
+    {
+        border-right-color: transparent;
+    }
+    99%
+    {
+        border-right-color: #00FF00;
+    }   
+    100%
+    {
+        border-right-color: transparent;
+    }
+}
+@keyframes escrever
+{
+    100%
+    {
+        max-width: 100%;
+        border-right-color: transparent;
+    }
+}

@@ -76,7 +76,7 @@ function vResposta()
     // Acertou?
     if (resposta == numeroCorreto) 
     {
-        msgTela.innerHTML = "Parabéns! Você acertou em " + (10 - tentativasRestantes) + " tentativas.";
+        msgTela.innerHTML = "Parabéns! Você acertou em " + (10 - tentativasRestantes) + " tentativas.\nO numero correto é " + numeroCorreto + ".";
         inputs.disabled = true;
         btnConf.disabled = true;
         btnRein.disabled = false;
@@ -106,21 +106,24 @@ function vResposta()
         btnConf.style.borderColor = "#FF0000";
         btnConf.style.color = "#FF0000";
         msgTent.innerHTML = "Você tem " +  (tent.innerHTML = tentativasRestantes) + " Tentativas...";
+        resposta.innerHTML = "";
         return;
     }
 
     //Dicas se o número correto é maior ou menor
     if (resposta < numeroCorreto) 
     {
-        msgTela.innerHTML = "O número correto é maior.";
+        msgTela.innerHTML = "O número correto é maior &uArr; que " + resposta + ".";
         tent.innerHTML = tentativasRestantes;
-        msgTela.style.color = "#FA8072";
+        msgTela.style.color = "#1E90FF";
+        resposta.innerHTML = " ";
     }
     else 
     {
-        msgTela.innerHTML = "O número correto é menor.";
+        msgTela.innerHTML = "O número correto é menor &dArr; que " + resposta + ".";
         tent.innerHTML = tentativasRestantes;
-        msgTela.style.color = "#87CEFA";
+        msgTela.style.color = "#00BFFF";
+        resposta.innerHTML = " ";
     }
 
     msgTent.innerHTML = "Você tem " +  (tent.innerHTML = tentativasRestantes) + " Tentativas...";
